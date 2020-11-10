@@ -18,31 +18,48 @@
 
     <h1>To-do list</h1>
     <p>what would you like to do?</p>
-    <input type=¨text¨></input> <span>
-        <button> Add</button> </span>
+    <input id="addText" type="text"></input> <span>
+        <button onclick="AddBtn()"> Add</button> </span>
+
+    date reminder<input type="date"></input>
 
 
-    <div>
-        <ul>
+    <ul></ul>
 
-            <li id=¨demo¨>buy groceries <button id=¨myBtn¨> Delete </button></li>
 
-            </br>
+    <ul id="list">
 
-            <li id=¨dem¨>buy clothing <button onlick=¨fun()¨>Delete</button> </li>
-        </ul>
-    </div>
+        <li id="demo"> <button onclick="myBtn()"> Delete </button></li>
+
+
+
+
+        <li id="dem">buy clothing <button onclick="myFun()">Delete</button></li>
+
+
+    </ul>
+
+
+
+
 
     <script>
-        let text = {}
-
-        document.getElementById(¨myBtn¨).onclick = funct();
-        funtion funct() {
-            document.getElementById(¨demo¨).innerHTML = text
+        function AddBtn() {
+            let el = document.createElement('li')
+            el.innerHTML = document.getElementById("addText").value
+            document.getElementById("list").appendChild(el)
         }
 
-        function fun() {
-            document.getElementById(¨dem¨).innerHTML = text
+        function myBtn() {
+            var ele = document.getElementById("demo");
+            ele.remove();
+
+        }
+
+
+        function myFun() {
+            var elmnt = document.getElementById("dem");
+            elmnt.remove();
         }
 
 
