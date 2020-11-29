@@ -4,67 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project-To-Do list</title>
+    <title>To-Do-List</title>
 
 
-
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 
 <body>
+    <div class="to-do">
+        <h2>Things to-do</h2>
 
-    <h1>To-do list</h1>
-    <p>what would you like to do?</p>
-    <input id="addText" type="text"></input> <span>
-        <button onclick="AddBtn()"> Add</button> </span>
-
-    date reminder<input type="date"></input>
-
-
-    <ul></ul>
-
-
-    <ul id="list">
-
-        <li id="demo"> <button onclick="myBtn()"> Delete </button></li>
+        <div class="to-do__input-box">
+            <input type="text">
+        </div>
+        <div>
+            <button>
+        </div>
 
 
 
-
-        <li id="dem">buy clothing <button onclick="myFun()">Delete</button></li>
-
-
-    </ul>
+    </div>
 
 
-
-
-
-    <script>
-        function AddBtn() {
-            let el = document.createElement('li')
-            el.innerHTML = document.getElementById("addText").value
-            document.getElementById("list").appendChild(el)
-        }
-
-        function myBtn() {
-            var ele = document.getElementById("demo");
-            ele.remove();
-
-        }
-
-
-        function myFun() {
-            var elmnt = document.getElementById("dem");
-            elmnt.remove();
-        }
-
-
-    </script>
-
+    <script src="init.js"></script>
 </body>
 
 </html>
